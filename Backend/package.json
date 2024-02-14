@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
+    "cookies": "^0.8.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.3.8",
+    "nodemon": "^2.0.16"
+  },
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "personal_project",
+  "main": "express.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon server.js"
+  },
+  "keywords": [
+    "awesome"
+  ],
+  "author": "adarsh",
+  "license": "ISC"
+}
