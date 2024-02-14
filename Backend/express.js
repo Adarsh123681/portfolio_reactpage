@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const PORT = 5000;
+const PORT = process.env.port ||5000;
 const bcrypt = require("bcryptjs");
 require("./mongo/db");
 const userDetails = require("./model/user");
