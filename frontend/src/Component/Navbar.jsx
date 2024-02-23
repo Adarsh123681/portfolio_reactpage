@@ -10,7 +10,7 @@ function Navbar() {
          <div className="w-screen h-16 bg-gray-700 font-medium transition-all duration-500 transition-all">
             {/* lOGO */}
             <div className="flex">
-               <img src="./image/Adarsh.jpeg" alt="" className="w-12 h-12 border-2 border-black rounded-full m-2 hover:animate-[wiggle_1s_ease-in-out_infinite]" />
+               <img src="./image/Adarsh.jpeg" alt="" className="w-12 h-12 border-2 border-black rounded-full m-2 " />
                <ul className="w-1/2 text-lime-100 font-semiBold m-auto hidden md:flex">
                   <Link to="/" className='mx-3 lg:mx-2 mt-2 hover:text-lime-800 active transition-all'>Home</Link>
                   <Link to="/about" className='mx-3 lg:mx-3 mt-2 hover:text-lime-800 transition-all'>About</Link>
@@ -31,7 +31,7 @@ function Navbar() {
                </div>
             </div>
             {
-               open && (<ul className="w-screen h-screen flex flex-col absolute right-0 bg-gray-700 text-white text-center text-md font-mono">
+               open && (<ul className="w-screen h-[20rem] flex flex-col absolute right-0 bg-gray-700 text-white text-center text-md font-mono transition-all delay-500 duration-300">
                   <Link to="/" className='mx-3 lg:mx-2 my-2 hover:text-red-500 transition-all duration-200 tracking-wide font-bold'>Home</Link>
                   <Link to="/about" className='mx-3 lg:mx-3 my-2 hover:text-red-500 transition-all duration-200 tracking-wide font-bold font-mono'>About</Link>
                   <Link to="/project" className='mx-3 lg:mx-3 my-2 hover:text-red-500 transition-all duration-200 tracking-wide font-bold font-mono'>Project</Link>

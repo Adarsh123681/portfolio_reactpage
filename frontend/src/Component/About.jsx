@@ -16,22 +16,8 @@ function About() {
           className="w-28 h-28 rounded-lg shadow-zinc-200 shadow-md m-auto my-5 md:"
         />
         {/* cotntent */}
-        <div className="w-fill h-fill text-center text-sm md:my-4 md:text-xl text-lime-50 tracking-wider break-words font-mono">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus
-          eveniet modi temporibus commodi cupiditate in iusto error nobis at,
-          nihil dignissimos libero rem beatae. Commodi, ut similique voluptate
-          vel voluptatum id exercitationem, corrupti deleniti cum provident
-          dicta? Ipsam fugit porro voluptates in, reiciendis quia, dolorem non
-          reprehenderit aperiam repellendus at modi architecto. Blanditiis
-          explicabo sint quo ratione voluptates. Officia, in commodi aliquid rem
-          sint inventore corporis animi iure quis sunt alias corrupti doloribus
-          autem maxime, maiores ipsa atque cumque magnam voluptatem nisi esse
-          aut. Magnam qui, odit iste blanditiis accusamus quas fugit minus quos cupiditate hic maxime consequatur
-          facilis accusantium quis ipsum assumenda obcaecati atque sint corrupti
-          perspiciatis nostrum illum harum tempora? At nisi, laborum eum eos,
-          eaque recusandae laudantium optio amet atque ratione pariatur aliquid
-          laboriosam. Sapiente vel sed illo dolore qui dolor quibusdam
-          repudiandae eum dicta velit.
+        <div className="w-[45rem] h-fill text-sm md:my-4 md:text-xl text-lime-50 tracking-wider break-words m-auto">
+        Hello there! I'm <b className="text-red-600">ADARSH TRIPATHI</b>, a budding web developer with a passion for crafting beautiful and functional digital experiences. While I may be new to the world of web development, my enthusiasm and eagerness to learn are boundless. I'm ready to dive headfirst into the exciting realm of coding and design, eager to make my mark in this dynamic field.
         </div>
       </div>
     </>

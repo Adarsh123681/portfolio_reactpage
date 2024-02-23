@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
- 
+
 function Footer() {
   return (
     <>
@@ -9,7 +9,7 @@ function Footer() {
         <div className='w-50 text-[.5rem] flex flex-col'>
           <div className='p-4 md:text-center'>@Copyright 2022</div>
           <div >All Rights Are Reserved</div>
-          </div>
+        </div>
       </div>
     </>
   )

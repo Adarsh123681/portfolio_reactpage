@@ -37,7 +37,7 @@ function Contact() {
       number,
       message,
     } = data;
-    const api = await fetch("/", {
+    const api = await fetch("/contact", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
@@ -61,11 +61,11 @@ function Contact() {
   return (
     <>
       {/* main container */}
-      <div className="w-screen h-screen bg-gray-700">
-        <h1 className="text-white text-center ml-20 py-10 lg:text-2xl">
-          Contact Me for Hiring me or any Freelancing work
+      <div className="w-screen bg-gray-700 h-screen grid place-content-center">
+        <h1 className="text-white text-center py-10 lg:text-2xl overflow-hidden -mt-40">
+        Ready to Get Started? Contact Us Now!
         </h1>
-        <form action="/contect" method="post" className="w-60 m-auto my-5">
+        <form className="md:w-[26rem] h-30 border-2 p-10 bg-black border-black-500 transition-all duration-500 rounded-2xl shadow-red-500/50 -mt-20 ml-10"method='Post' action='/contact'>
           <input
             name="username"
             value={data.username}
