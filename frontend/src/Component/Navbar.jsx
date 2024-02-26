@@ -31,7 +31,7 @@ function Navbar() {
                </div>
             </div>
             {
-               open && (<ul className="w-screen h-[20rem] flex flex-col absolute right-0 bg-gray-700 text-white text-center text-md font-mono transition-all delay-500 duration-300">
+               open && (<ul className="w-fill h-[20rem] flex flex-col absolute right-0 bg-gray-700 text-white text-center text-md font-mono transition-all delay-500 duration-300">
                   <Link to="/" className='mx-3 lg:mx-2 my-2 hover:text-red-500 transition-all duration-200 tracking-wide font-bold'>Home</Link>
                   <Link to="/about" className='mx-3 lg:mx-3 my-2 hover:text-red-500 transition-all duration-200 tracking-wide font-bold font-mono'>About</Link>
                   <Link to="/project" className='mx-3 lg:mx-3 my-2 hover:text-red-500 transition-all duration-200 tracking-wide font-bold font-mono'>Project</Link>

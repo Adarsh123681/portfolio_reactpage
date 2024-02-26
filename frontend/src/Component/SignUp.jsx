@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import {useHistory} from "react-router-dom"
+import { useHistory } from "react-router-dom"
 
 function SignUp() {
   const history = useHistory()
@@ -17,41 +17,46 @@ function SignUp() {
 
   const submit = async (event) => {
     event.preventDefault();
-    const { username, email, password, gender , address } = input;
+    const { username, email, password, address } = input;
     const res = await fetch("/signUp", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        username, email, password, gender, address
+        username, email, password, address
       })
     })
 
     const value = await res.json();
-
-    if (res.status === 422  || !value) {
-      window.alert("Invalid credentials");
-      console.log("Invalid credentials") 
-    } else {
-      window.alert(" Successfully registered");  
+    console.log(value)
+    if (res.status === 400 || !value) {
+      window.alert("User already Exist");
+    }
+     else if (res.status === 422) {
+      window.alert("Please fill all information");
+    }
+    else {
+      window.alert("Successfully registerd");
       history.push("/signIn");
     }
+
+
 
   }
 
   return (
     <div className="w-screen bg-gray-700 h-screen grid place-content-center ">
-     <form className="md:w-92 md:my-20 border-2 p-10 bg-black border-black-500 transition-all duration-500 rounded-3xl shadow-red-500/50" method='Post' action='/signUp'>
+      <form className="md:w-92 md:my-20 border-2 p-10 bg-black border-black-500 transition-all duration-500 rounded-3xl shadow-red-500/50" method='Post' action='/signUp'>
         <div className='text-center text-gray-200 flex flex-col'>
           <label forHtml="name-1">Register Your Self  !!!</label>
 
           <input type="text" value={input.username} name="username" placeholder='Enter Your Username' onChange={handleInput} className="md:w-80 text-gray-600 md:my-2 my-1 rounded-lg hover:border-2 hover:shadow-md hover:shadow-black" />
- 
+
           <input type="email" value={input.email} name="email" placeholder='Enter your email ' onChange={handleInput} className="md:w-80 text-gray-600 md:my-2 my-1 rounded-lg hover:border-2 hover:shadow-md hover:shadow-black" />
 
           <input type="password" value={input.password} name="password" placeholder='Enter your password' onChange={handleInput} className="md:w-80 text-gray-600 md:my-2 my-1 rounded-lg hover:border-2 hover:shadow-md hover:shadow-black" />
-         
+
           <textarea name="address" value={input.address} id="" cols="24" rows="4" onChange={handleInput} placeholder='Enter Your Address' className='md:w-80 text-gray-600 md:my-2 my-1 rounded-lg hover:border-2 hover:shadow-md hover:shadow-black'></textarea>
         </div>
         <div class="">

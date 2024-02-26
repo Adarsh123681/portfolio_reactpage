@@ -26,12 +26,14 @@ function SignIn() {
 
     const value = res.json();
 
-    if (res.status === 422  || !value) {
-      window.alert("Invalid credentials");
-      console.log("Invalid credentials")
-    } else {
-      window.alert(" Successfully SignedIn");
-      console.log("success");
+    if (res.status === 401 || !value) {
+      window.alert("Invalid Credentials");
+    }
+     else if (res.status === 422) {
+      window.alert("Please fill all information");
+    }
+    else {
+      window.alert("user logedIn");
       history.push("/");
     }
 
@@ -42,7 +44,7 @@ function SignIn() {
         <div className='text-center text-gray-200 flex flex-col'>
           <label forHtml="name-1">Welcome Back !!!</label>
 
-          <input type="text" value={input.username} name="username" placeholder='Enter Your Username' onChange={handleInput} className="md:w-60 md:my-2 my-1 rounded-lg hover:border-2 hover:shadow-md hover:shadow-black" />
+          <input type="text" value={input.username} name="username" placeholder='Enter Your Username' onChange={handleInput} className="md:w-60 md:my-2 my-1 text-black rounded-lg hover:border-2 hover:shadow-md hover:shadow-black" />
  
           <input type="email" value={input.email} name="email" placeholder='Enter your email ' onChange={handleInput} className="md:w-60 md:my-2 my-1 rounded-lg hover:border-2 text-black hover:shadow-md hover:shadow-black" />
 

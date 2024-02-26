@@ -9,7 +9,6 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Navbar from "./Component/Navbar";
 import SignUp from "./Component/SignUp";
 import Footer from "./Component/Footer";
-import Skills from "./Component/Skills";
 
 import AOS from "aos";
 import "aos/dist/aos.css";

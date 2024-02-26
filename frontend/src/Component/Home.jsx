@@ -3,9 +3,8 @@ import Project from "./Project";
 import Skills from './Skills';
 import Services from "./Services"
 import { BsGithub, BsInstagram, BsLinkedin } from "react-icons/bs";
-import { BsFacebook } from "react-icons/bs";
 import { BsTelegram } from "react-icons/bs";
-
+import resume from "./Resume.pdf"
 function Home() {
 
   return (
@@ -23,15 +22,18 @@ function Home() {
             <span className="text-3xl">I am</span>
             <span className="text-xl leading-10 bold text-gradient-to-r from-blue-600 via-green-500 to-indigo-400">Adarsh Tripathi</span>
             {/* text-small */}
-            <span className="text-md mb-5">Web Developer</span>
-
-            <button className='w-40 h-10 bg-red-800 hover:bg-red-300 hover:scale-110 rounded-lg shadow-md shadow-red-100 hidden md:flex p-2'>Download Resume</button>
-
+            <span className="text-md mb-5">Web Developer</span> 
+            <a
+              href={resume}
+              download="Resume.pdf"
+            >
+              <button className='w-40 h-10 bg-red-800 hover:bg-red-300 hover:scale-110 rounded-lg shadow-md shadow-red-100 hidden md:flex p-2' download="resume">Download Resume</button>
+            </a>
             <div className="flex m-auto md:ml-3 md:mt-3 md:flex">
-              <a target="_blank" href=""><BsLinkedin className='w-6 md:10 md:h-10 h-6 mx-[.2rem] hover:scale-110 duration-150 text-blue-400' /></a>
-              <a target="_blank" href="https://www.instagram.com/invites/contact/?i=1nubf8w7k89q0&utm_content=eb0oqd3"> <BsInstagram className='w-6 md:10 md:h-10 h-6 mx-2 hover:scale-110 duration-150 text-red-700' /></a>
-              <a href="https://web.telegram.org/z/" target="_blank"><BsTelegram className='w-6 md:10 md:h-10 h-6 mx-2 hover:scale-110 duration-150 text-blue-400' /></a>
-              <a target="_blank" href="https://github.com/Adarsh123681"><BsGithub className='w-6 md:10 md:h-10 h-6 mx-2 hover:scale-110 duration-150 text-blue-400' /></a>
+              <a href="https://www.linkedin.com/feed/"><BsLinkedin className='w-6 md:10 md:h-10 h-6 mx-[.2rem] hover:scale-110 duration-150 text-blue-400' /></a>
+              <a href="https://www.instagram.com/invites/contact/?i=1nubf8w7k89q0&utm_content=eb0oqd3"> <BsInstagram className='w-6 md:10 md:h-10 h-6 mx-2 hover:scale-110 duration-150 text-red-700' /></a>
+              <a href="https://web.telegram.org/z/"><BsTelegram className='w-6 md:10 md:h-10 h-6 mx-2 hover:scale-110 duration-150 text-blue-400' /></a>
+              <a href="https://github.com/Adarsh123681"><BsGithub className='w-6 md:10 md:h-10 h-6 mx-2 hover:scale-110 duration-150 text-blue-400' /></a>
             </div>
           </div>
           {/* image */}
