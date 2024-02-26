@@ -11,9 +11,7 @@ const contact = require("./model/contactdetails");
 
 app.use(express.json());
 app.use(cookieParser());
-const auth = require("./middleware/jwtVerification");
-// middleware
-console.log("middleware");
+
 
 // signUp
 app.post("/signUp", async (req, res) => {
@@ -75,7 +73,7 @@ app.post("/signIn", async (req, res) => {
 
 // contact
 app.post("/contact", async (req, res) => {
-  const { username, email, message } = req.body;
+  const { username, email, message } = await req.body;
   if (!username || !email || !message) {
    return res.status(422).json({ message: "Please fill all the information" });
   }
@@ -84,7 +82,7 @@ app.post("/contact", async (req, res) => {
     if(userfind){
       return res.status(201).json({message  : "user found"})
     }
-    const saveData = new contact({
+    const saveData = await new contact({
       username,
       email : userfind,
       message,
@@ -100,12 +98,6 @@ app.post("/contact", async (req, res) => {
   } catch {
     return res.status(500).json({ message: "Error" });
   }
-});
-
-app.get("/", auth, (req, res) => {
-  const userId = req.userId;
-  console.log(userId);
-  return res.send("Home page accessed ... ");
 });
 
 app.listen(PORT, () => {

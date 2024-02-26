@@ -38,11 +38,9 @@ function Contact() {
     if(response.status === 200){
       window.alert("Message sended sucessfully...")
     }
-    else if(response.status === 201){
-      window.alert("user are found")
-    }
     else{
-      window.alert("please login before sending any message")
+      window.alert("messae not sent")
+ 
     }
   };
   return (
