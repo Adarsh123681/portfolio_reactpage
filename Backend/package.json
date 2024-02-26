@@ -7,7 +7,8 @@
     "express": "^4.18.1",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.3.8",
-    "nodemon": "^2.0.16"
+    "nodemon": "^2.0.16",
+    "parcel": "^2.11.0"
   },
   "name": "backend",
   "version": "1.0.0",
@@ -16,7 +17,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon server.js",
-    "start": "node app.js"
+    "start": "node app.js",
+    "build": "parcel build server.js --target-node --out -dir dist"
   },
   "keywords": [
     "awesome"
