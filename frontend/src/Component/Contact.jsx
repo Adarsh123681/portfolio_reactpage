@@ -35,28 +35,28 @@ function Contact() {
     });
 
     const response = await api.json();
-    if(response.status === 200){
+    if (response.status === 200) {
       window.alert("Message sended sucessfully...")
     }
-    else{
+    else {
       window.alert("messae not sent")
- 
+
     }
   };
   return (
     <>
       {/* main container */}
-      <div className="w-screen bg-gray-700 h-screen grid place-content-center">
-        <h1 className="text-white text-center ml-8 py-10 lg:text-2xl overflow-hidden -mt-40">
-          Ready to Get Started? Contact Us Now!
-        </h1>
-        <form className="md:w-[26rem] h-30 border-2 p-10 bg-black border-black-500 transition-all duration-500 rounded-2xl shadow-red-500/50 -mt-20 ml-10" method='POST' action='/contact'>
+      <div className="bg-gray-800 h-screen grid place-content-center mt-[-8rem]">
+        <form className="w-80 md:my-20 border-2 p-10 bg-black border-black-500 transition-all duration-500 rounded-3xl  mt-10 shadow-2xl shadow-black ease-in" method='POST' action='/contact'>
+          <h1 className="text-white text-center">
+            Ready to Get Started? Contact Us Now!
+          </h1>
           <input
             name="username"
             value={data.username}
             type="text"
             placeholder="First Name"
-            className="w-52 lg:w-80 ml-2 font-sans hover:translate-y-1 border-none transition-all  text-black border-3 rounded-lg my-1"
+            className="w-52 lg:w-60 ml-2 font-sans hover:translate-y-1 border-none transition-all  text-black border-3 rounded-lg my-1"
             onChange={HandleOnChange}
           />
           <input
@@ -64,21 +64,21 @@ function Contact() {
             value={data.email}
             type="email"
             placeholder="Email..."
-            className="w-52 ml-2 lg:w-80 font-sans hover:translate-y-1 border-none transition-all text-black border-3 rounded-lg my-1"
+            className="w-52 ml-2 lg:w-60 font-sans hover:translate-y-1 border-none transition-all text-black border-3 rounded-lg my-1"
             onChange={HandleOnChange}
           />
           <textarea
             name="message"
             value={data.message}
             id=""
-            className=" w-48 ml-2 lg:w-80 font-sans hover:translate-y-1 border-none transition-all text-black border-2 rounded-lg my-1 h-24"
+            className=" w-56 ml-2 lg:w-60 font-sans hover:translate-y-1 border-none transition-all text-black border-2 rounded-lg my-1 h-24"
             onChange={HandleOnChange}
             placeholder="Messages..."
           ></textarea>
           {/* on submit button */}
-          <div className="w-screen m-auto my-5">
+          <div className="m-auto my-5">
             <button
-              className="w-24 h-10 mx-28 text-xl border-3 border-black rounded-lg bg-blue-600 hover:bg-blue-300 transition-all"
+              className="w-24 h-10 mx-20 text-xl border-3 border-black rounded-lg bg-blue-600 hover:bg-blue-300 transition-all text-white"
               onClick={submit}
             >
               Submit

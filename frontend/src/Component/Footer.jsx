@@ -4,13 +4,30 @@ import { Link } from 'react-router-dom'
 function Footer() {
   return (
     <>
-      <div className="w-full h-32 lg:h-32 md:h-32 bg-gray-700 text-lime-100 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 place-items-center md:gap-0 relative my-2 fixed bottom-0">
-        <Link to="/" className='w-80 h-2 pl-24 py-2 text-xl md:pl-32 md:my-8'>Adarsh tripathi</Link>
-        <div className='w-50 text-[.5rem] flex flex-col'>
-          <div className='p-4 md:text-center'>@Copyright 2022</div>
-          <div >All Rights Are Reserved</div>
+      
+
+<footer className="bg-white shadow dark:bg-gray-800">
+    <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+        <div className="sm:flex sm:items-center sm:justify-between">
+            <a href="/" className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+                <img src="./image/Adarsh.jpeg" className="h-8" alt="Flowbite Logo" />
+                <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Adarsh Portfolio</span>
+            </a>
+            <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+                <li>
+                    <a href="/about" className="hover:underline me-4 md:me-6">About</a>
+                </li> 
+                <li>
+                    <a href="/contact" className="hover:underline">Contact</a>
+                </li>
+            </ul>
         </div>
-      </div>
+        <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+        <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="https://flowbite.com/" className="hover:underline">Adarsh™</a>. All Rights Reserved.</span>
+    </div>
+</footer>
+
+
     </>
   )
 }

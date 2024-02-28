@@ -15,7 +15,7 @@ function Home() {
           <div className="md:h-96 lg:ml-60 lg:mt-20 flex flex-col text-center md:text-left m-auto md:mt-8 tracking-wider skew-12">
             {/*  big text*/}
             <span className="text-3xl mt-3 transition-all delay-500">Hello</span>
-            <div className="text-xl sm:text-xl md:text-3xl font-bold leading-tight my-2">
+            <div className="text-xl sm:text-xl md:text-3xl font-bold   my-2">
               Welcome To My Portfolio
             </div>
             {/* text medium */}

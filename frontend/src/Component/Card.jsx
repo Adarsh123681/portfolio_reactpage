@@ -3,7 +3,7 @@ function Card({ item, content, Link, image }) {
 
   return (
     <> 
-       <div className="sm:w-[28rem] h-[22rem] bg-black m-5 shadow-cyan-400 shadow-2xl border-2 border-cyan-300 rounded-md justify-center m-auto my-2">
+       <div className="lg:w-[27rem] w-[22rem] h-[22rem] sm:h-[28rem] bg-black m-2 shadow-cyan-400 shadow-2xl border-2 border-cyan-300 rounded-md align-items-center my-2 relative overflow-hidden">
        <div className="m-1 text-[.9rem] md:text-[1.3rem] text-lime-200">
           {item}
         </div>
@@ -11,7 +11,7 @@ function Card({ item, content, Link, image }) {
           {content}
         </div>
         <div className="flex justify-center mt-2">
-          <button className='w-16 h-8 text-sm border-2 border-white rounded-[.8rem] bg-red-700 hover:bg-red-300 p-1 mr-2'><a href={Link}>Code</a></button> 
+          <button className='w-16 h-8 text-sm border-2 border-white rounded-[.8rem] bg-red-700 hover:bg-red-300 p-1 absolute bottom-3'><a href={Link}>Code</a></button> 
       </div>
        </div>
     </>

@@ -8,11 +8,8 @@ const cookieParser = require("cookie-parser");
 require("./mongo/db");
 const userDetails = require("./model/user");
 const contact = require("./model/contactdetails");
-
 app.use(express.json());
 app.use(cookieParser());
-
-
 // signUp
 app.post("/signUp", async (req, res) => {
   const { username, email, password, address } = req.body;
