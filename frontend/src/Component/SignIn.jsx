@@ -1,20 +1,21 @@
 import React, { useState } from 'react'
 import { Link, useHistory } from "react-router-dom";
+import { toast } from "react-toastify"
 function SignIn() {
   const history = useHistory();
   const [input, setInput] = useState({
     username: "",
     email: "",
     password: ""
-  }); 
+  });
 
   const handleInput = (e) => {
     setInput({ ...input, [e.target.name]: e.target.value })
-  } 
-  const submit = async (event) => { 
+  }
+  const submit = async (event) => {
     event.preventDefault();
     const { username, email, password } = input;
-    const res = await fetch("/signIn", {
+    const res = await fetch("https://adarsh-54q0.onrender.com/signIn", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -22,18 +23,19 @@ function SignIn() {
       body: JSON.stringify({
         username, email, password
       })
-    }); 
+    });
 
     const value = res.json();
 
     if (res.status === 401 || !value) {
-      window.alert("Invalid Credentials");
+      window.alert("Invalid credentials")
     }
-     else if (res.status === 422) {
+    else if (res.status === 422) {
       window.alert("Please fill all information");
     }
     else {
       window.alert("user logedIn");
+
       history.push("/");
     }
 
@@ -47,15 +49,15 @@ function SignIn() {
           <input type="text" value={input.username} name="username" placeholder='Enter Your Username' onChange={handleInput} className="md:w-60 md:my-2 my-1 text-black rounded-lg hover:border-2 hover:shadow-md hover:shadow-black" />
 
           <input type="email" value={input.email} name="email" placeholder='Enter your email ' onChange={handleInput} className="md:w-60 md:my-2 my-1 rounded-lg hover:border-2 text-black hover:shadow-md hover:shadow-black" />
-          
+
           <input type="password" value={input.password} name="password" placeholder='Enter your password' onChange={handleInput} className="md:w-60 md:my-2 my-1 rounded-lg text-black hover:border-2 hover:shadow-md hover:shadow-black" />
-           
+
           <h1 className='font-sans-serif'>Not Registerd Go To: <Link to="/signUp" className='text-red-600'>SignUp</Link></h1>
-        </div> 
-        
-          <div className="my-3">
-            <button onClick={submit} className="w-20 text-gray-300 bg-red-800 hover:bg-red-300 hover:text-black hover:scale-100 p-2 rounded-lg mx-[5rem]">Submit</button>
-          
+        </div>
+
+        <div className="my-3">
+          <button onClick={submit} className="w-20 text-gray-300 bg-red-800 hover:bg-red-300 hover:text-black hover:scale-100 p-2 rounded-lg mx-[5rem]">Submit</button>
+
         </div>
       </form>
 

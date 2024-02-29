@@ -22,7 +22,7 @@ function Contact() {
       message,
       email
     } = data;
-    const api = await fetch("/contact", {
+    const api = await fetch("https://adarsh-54q0.onrender.com/contact", {
       method: "POST",
       headers: {
         "Content-type": "application/json",

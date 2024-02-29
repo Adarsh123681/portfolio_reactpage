@@ -18,7 +18,7 @@ function SignUp() {
   const submit = async (event) => {
     event.preventDefault();
     const { username, email, password, address } = input;
-    const res = await fetch("/signUp", {
+    const res = await fetch("https://adarsh-54q0.onrender.com/signUp", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
