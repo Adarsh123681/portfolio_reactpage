@@ -46,8 +46,8 @@ function SignUp() {
   }
 
   return (
-    <div className="bg-gray-800 h-screen grid place-content-center mt-[-5rem] overflow-x-hidden">
-      <form className="md:w-92 md:my-20 border-2 p-10 bg-black border-black-500 transition-all duration-500 rounded-3xl shadow-2xl shadow-black ease-in" method='Post' action='/signUp'>
+    <div className="bg-gray-800 h-fit grid place-content-center">
+      <form className="md:w-fit md:my-20 mt-8 mb-6 border-2 p-10 bg-black border-black-500 transition-all duration-500 rounded-3xl shadow-2xl shadow-black ease-in" method='Post' action='/signUp'>
         <div className='text-center text-gray-200 flex flex-col'>
           <label forHtml="name-1">Register Your Self  !!!</label>
 

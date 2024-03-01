@@ -30,11 +30,11 @@ function Navbar() {
                </div>
             </div>
             {
-               open && (<ul className="w-full h-[20rem] flex flex-col absolute right-0 bg-gray-700 text-white pl-8 text-md font-mono transition-all duration-300">
+               open && (<ul className="w-full h-[20rem] flex flex-col absolute right-0 dark:bg-gray-800 text-white pl-8 text-md font-mono transition-all duration-300">
                   <Link to="/" className='mx-3 lg:mx-3 my-2 hover:text-red-500 transition-all duration-200 tracking-wide font-bold'>Home</Link>
                   <Link to="/about" className='mx-3 lg:mx-3 my-2 hover:text-red-500 transition-all duration-200 tracking-wide font-bold font-mono'>About</Link>
                   <Link to="/project" className='mx-3 lg:mx-3 my-2 hover:text-red-500 transition-all duration-200 tracking-wide font-bold font-mono'>Project</Link>
-                  <Link to="/services"><input type="button" className='mx-2 lg:mx-5 hover:text-red-500 transition-all duration-200 font-bold font-mono'/>Services</Link>
+                  <Link to="/services" className='mx-3 lg:mx-5 my-2 hover:text-red-500 transition-all duration-200 font-bold font-mono'>Services</Link>
                   <Link to="/contact" className='mx-3 lg:mx-3 my-2 hover:text-red-500 transition-all duration-200 tracking-wide font-bold'>Contact Me</Link>
                   <button className='w-40 h-10 bg-red-800 hover:bg-red-300 hover:scale-110 rounded-lg shadow-md shadow-red-100 hidden md:flex p-2' download="resume">Download Resume</button>
                   <Link to="/signIn"><input type="button" value="SignIn" className='w-20 rounded-lg my-1 mx-3 p-1 bg-green-800 hover:bg-green-200 hover:text-black transition-all duration-200' /></Link>

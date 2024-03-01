@@ -9,7 +9,7 @@ function Home() {
 
   return (
     <>
-      <div className="w-screen bg-gray-800 text-white">
+      <div className="bg-gray-800 text-white">
         {/* content */}
         <div className="w-fill md:flex md:ml-28">
           <div className="md:h-96 lg:ml-60 lg:mt-20 flex flex-col text-center md:text-left m-auto md:mt-8 tracking-wider skew-12">

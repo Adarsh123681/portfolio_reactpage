@@ -97,6 +97,11 @@ app.post("/contact", async (req, res) => {
   }
 });
 
+app.get("/user_Details", async(req , res) => {
+  res.send(userDetails)
+})
+
+
 app.listen(PORT, () => {
   console.log(`Your server is listening on the post : ${PORT}`);
 });

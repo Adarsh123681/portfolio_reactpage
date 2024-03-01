@@ -4,8 +4,8 @@ import data from "./Data"
 function Project() {
   return (
     <>
-      <h1 className="w-fill text-2xl py-4 md:text-xl m-0 p-2 bg-gray-600 text-cyan-300 font-bold text-center">PROJECTS</h1>
-      <div className="h-fit bg-gray-800 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 justify-center align-items-center item-center mb-2 text-white">
+      <h1 className="text-center text-2xl py-4 md:text-sm  p-2 bg-gray-600 text-cyan-300 font-bold text-center">PROJECTS</h1>
+      <div className="h-fit bg-gray-800 grid gap-2 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 m-4 justify-center align-items-center item-center mb-2 text-white">
         {
           data.map((ele) => {
             const { name, content, link, img } = ele
