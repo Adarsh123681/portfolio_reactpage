@@ -3,7 +3,7 @@ function Card({ item, content, Link, image }) {
 
   return (
     <> 
-       <div className="lg:w-[27rem] w-[22rem] h-[22rem] sm:h-[28rem] bg-black m-2 shadow-cyan-400 shadow-2xl border-2 border-cyan-300 rounded-md align-items-center my-2 relative overflow-hidden">
+       <div className="lg:w-[27rem] w-[22rem] sm:h-[25rem] h-[26rem] bg-black m-2 shadow-cyan-400 shadow-2xl border-2 border-cyan-300 rounded-md align-items-center my-2 relative overflow-hidden">
        <div className="m-1 text-[.9rem] md:text-[1.3rem] text-lime-200">
           {item}
         </div>
