@@ -3,7 +3,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-require("dotenv").config()
+require("dotenv").config();
 const cookieParser = require("cookie-parser");
 require("./mongo/db");
 const userDetails = require("./model/user");
@@ -23,7 +23,7 @@ app.post("/signUp", async (req, res) => {
     }
     const hashedPassword = await bcrypt.hash(password, 12);
 
-    const saveData = new userDetails({ 
+    const saveData = new userDetails({
       username,
       email,
       password: hashedPassword,
@@ -45,7 +45,9 @@ app.post("/signIn", async (req, res) => {
   const { username, email, password } = req.body;
   try {
     if (!username || !email || !password) {
-      return res.status(422).json({ message: "Please fill all the information" });
+      return res
+        .status(422)
+        .json({ message: "Please fill all the information" });
     }
     const userfind = await userDetails.findOne({ email: email });
     if (!userfind) {
@@ -56,7 +58,7 @@ app.post("/signIn", async (req, res) => {
       const token = jwt.sign(
         { userId: userDetails._id },
         process.env.SECRET_KEY
-      ); 
+      );
       res.cookie("token", token, { httpOnly: true });
       return res.status(200).json({ message: "successfully signed in" });
     } else {
@@ -71,37 +73,41 @@ app.post("/signIn", async (req, res) => {
 app.post("/contact", async (req, res) => {
   const { username, email, message } = await req.body;
   if (!username || !email || !message) {
-   return res.status(422).json({ message: "Please fill all the information" });
+    return res.status(422).json({ message: "Please fill all the information" });
   }
   try {
     const userfind = await userDetails.findOne({ email: email });
-    if(userfind){
-      return res.status(201).json({message  : "user found"})
+    if (userfind) {
+      return res.status(201).json({ message: "user found" });
     }
     const saveData = await new contact({
       username,
-      email : userfind,
+      email: userfind,
       message,
     });
 
     const dataSaved = await saveData.save();
-    if(dataSaved){
-      return res.status(200).json({message : "Message are succefully sent to server"})
-    }
-    else{
-      return res.status(400).json({message: "Message are not sended ..."})
+    if (dataSaved) {
+      return res
+        .status(200)
+        .json({ message: "Message are succefully sent to server" });
+    } else {
+      return res.status(400).json({ message: "Message are not sended ..." });
     }
   } catch {
     return res.status(500).json({ message: "Error" });
   }
 });
 
-app.get("/user_Details", async(req , res) => {
-
-  console.log("Hello World")
-  await res.send(userDetails)
-})
-
+app.get("/user_Details", async (req, res) => {
+  const getUser = await userDetails.find();
+  console.log(getUser);
+  if (!getUser) {
+    console.log("all users are not found");
+  } else {
+    res.status(200).json({ message: "Users are found successully", getUser });
+  }
+});
 
 app.listen(PORT, () => {
   console.log(`Your server is listening on the post : ${PORT}`);
