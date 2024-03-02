@@ -3,7 +3,7 @@ function Card({ item, content, Link, image }) {
 
   return (
     <> 
-       <div className="w-fit h-fit bg-black gap-1 shadow-cyan-500 shadow-lg border-2 border-cyan-300 rounded-md align-items-center my-2">
+       <div className="w-fit h-fit bg-black gap-1 shadow-cyan-500 shadow-lg border-2 border-cyan-300 rounded-md align-items-center m-4">
        <div className="p-2 text-[.9rem] md:text-[1.3rem] text-lime-200 hover:underline">
           {item}
         </div>

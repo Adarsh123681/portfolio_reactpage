@@ -41,7 +41,6 @@ app.post("/signUp", async (req, res) => {
   }
 });
 
-// signIn
 app.post("/signIn", async (req, res) => {
   const { username, email, password } = req.body;
   try {
@@ -98,7 +97,9 @@ app.post("/contact", async (req, res) => {
 });
 
 app.get("/user_Details", async(req , res) => {
-  res.send(userDetails)
+
+  console.log("Hello World")
+  await res.send(userDetails)
 })
 
 

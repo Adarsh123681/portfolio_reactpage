@@ -18,7 +18,7 @@ function SignUp() {
   const submit = async (event) => {
     event.preventDefault();
     const { username, email, password, address } = input;
-    const res = await fetch("https://adarsh-54q0.onrender.com/signUp", {
+    const res = await fetch("/signUp", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -33,7 +33,7 @@ function SignUp() {
     if (res.status === 400 || !value) {
       window.alert("User already Exist");
     }
-     else if (res.status === 422) {
+    else if (res.status === 422) {
       window.alert("Please fill all information");
     }
     else {
