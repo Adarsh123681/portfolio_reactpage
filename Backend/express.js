@@ -11,7 +11,7 @@ const contact = require("./model/contactdetails");
 app.use(express.json());
 app.use(cookieParser());
 // signUp
-app.post("https://adarsh-54q0.onrender.com/signUp", async (req, res) => {
+app.post(" /signUp", async (req, res) => {
   const { username, email, password, address } = req.body;
   if (!username || !email || !password || !address) {
     return res.status(422).json({ message: "Please fill all the information" });
@@ -41,7 +41,7 @@ app.post("https://adarsh-54q0.onrender.com/signUp", async (req, res) => {
   }
 });
 
-app.post("https://adarsh-54q0.onrender.com/signIn", async (req, res) => {
+app.post("/signIn", async (req, res) => {
   const { username, email, password } = req.body;
   try {
     if (!username || !email || !password) {
