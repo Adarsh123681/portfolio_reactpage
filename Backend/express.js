@@ -70,7 +70,7 @@ app.post("/signIn", async (req, res) => {
 });
 
 // contact
-app.post("https://adarsh-54q0.onrender.com/contact", async (req, res) => {
+app.post("/contact", async (req, res) => {
   const { username, email, message } = await req.body;
   if (!username || !email || !message) {
     return res.status(422).json({ message: "Please fill all the information" });
