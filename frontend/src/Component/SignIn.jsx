@@ -28,7 +28,8 @@ function SignIn() {
     const value = res.json();
 
     if (res.status === 401 || !value) {
-      window.alert("Invalid credentials")
+      window.alert("Invalid credentials");
+      console.log("iNVALID CREADENTIALS")
     }
     else if (res.status === 422) {
       window.alert("Please fill all information");

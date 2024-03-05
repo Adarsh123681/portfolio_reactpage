@@ -22,21 +22,17 @@ function Contact() {
       message,
       email
     } = data;
-    const api = await fetch("https://adarsh-54q0.onrender.com/contact", {
+    const api = await fetch("/contact", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
       },
-      body: JSON.stringify({
-        username,
-        email,
-        message,
-      }),
+      body: JSON.stringify({ username, email, message, }),
     });
 
     const response = await api.json();
     if (response.status === 200) {
-      window.alert("Message sended sucessfully...")
+      { <h1>Message Sent Successfully</h1> }
     }
     else {
       window.alert("messae not sent")

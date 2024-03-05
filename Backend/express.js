@@ -3,6 +3,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
+const cors = require("cors")
 require("dotenv").config();
 const cookieParser = require("cookie-parser");
 require("./mongo/db");
@@ -10,8 +11,15 @@ const userDetails = require("./model/user");
 const contact = require("./model/contactdetails");
 app.use(express.json());
 app.use(cookieParser());
+app.use(function(req, res, next) {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+  res.setHeader('Access-Control-Allow-Credentials', true);
+  next();
+});
 // signUp
-app.post("https://adarsh-54q0.onrender.com/signUp", async (req, res) => {
+app.post("/signUp", async (req, res) => {
   const { username, email, password, address } = req.body;
   if (!username || !email || !password || !address) {
     return res.status(422).json({ message: "Please fill all the information" });
@@ -41,7 +49,7 @@ app.post("https://adarsh-54q0.onrender.com/signUp", async (req, res) => {
   }
 });
 
-app.post("https://adarsh-54q0.onrender.com/signIn", async (req, res) => {
+app.post("/signIn", async (req, res) => {
   const { username, email, password } = req.body;
   try {
     if (!username || !email || !password) {
@@ -70,7 +78,7 @@ app.post("https://adarsh-54q0.onrender.com/signIn", async (req, res) => {
 });
 
 // contact
-app.post("https://adarsh-54q0.onrender.com/contact", async (req, res) => {
+app.post("/contact", async (req, res) => {
   const { username, email, message } = await req.body;
   if (!username || !email || !message) {
     return res.status(422).json({ message: "Please fill all the information" });
