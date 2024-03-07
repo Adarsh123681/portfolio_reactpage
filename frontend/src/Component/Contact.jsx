@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Contact() {
   const [data, setData] = useState({
@@ -22,7 +24,7 @@ function Contact() {
       message,
       email
     } = data;
-    const api = await fetch("/contact", {
+    const api = await fetch("https://adarsh-54q0.onrender.com/contact", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
@@ -31,13 +33,31 @@ function Contact() {
     });
 
     const response = await api.json();
-    if (response.status === 200) {
-      { <h1>Message Sent Successfully</h1> }
+    if (api.status === 401 || !response) {
+      toast("Invalid credentials...", {
+        type: "danger",
+        position: "top-center",
+        autoClose: 3000,
+
+      });
+    }
+    else if (api.status === 422) {
+      // window.alert("Please fill all information");
+      toast("Please fill all information...", {
+        type: "warning",
+        position: "top-center",
+        autoClose: 5000,
+      });
     }
     else {
-      window.alert("messae not sent")
-
+      toast("Messae sendded successfully...", {
+        type: "success",
+        position: "top-center",
+        autoClose: 5000,
+      });
+       
     }
+    setData(" ")
   };
   return (
     <>
@@ -79,6 +99,7 @@ function Contact() {
             >
               Submit
             </button>
+            <ToastContainer/>
           </div>
         </form>
       </div>

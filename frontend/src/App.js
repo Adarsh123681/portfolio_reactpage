@@ -9,10 +9,9 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Navbar from "./Component/Navbar";
 import SignUp from "./Component/SignUp";
 import Footer from "./Component/Footer";
-
 import AOS from "aos";
 import "aos/dist/aos.css";
-AOS.init();
+AOS.init(); 
 
 function App() {
   return (

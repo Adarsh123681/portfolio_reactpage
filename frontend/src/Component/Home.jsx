@@ -38,7 +38,7 @@ function Home() {
           </div>
           {/* image */}
           <div className="md:w-1/2">
-            <img src="./image/Adarsh.jpeg" alt="" className="w-40 h-40 lg:mt-24 md:w-60 md:h-60 m-auto my-5 md:mt-16 lg:mx-24 rounded-full shadow-blue-200" />
+            <img src="/image/Adarsh.jpeg" alt="" className="w-40 h-40 lg:mt-24 md:w-60 md:h-60 m-auto my-5 md:mt-16 lg:mx-24 rounded-full shadow-blue-200" />
           </div>
         </div>
         <Skills />

@@ -9,7 +9,7 @@ function About() {
  <h1 className="text-2xl py-4 md:text-xl m-2 p-2 bg-gray-600 text-cyan-300 rounded-lg font-bold text-center tracking-wide">About Me</h1>
         {/* image */}
         <img
-          src="./image/Adarsh.jpeg"
+          src="/image/Adarsh.jpeg"
           alt=""
           className="w-28 h-28 rounded-lg shadow-zinc-200 shadow-md m-auto my-5 md:"
         />

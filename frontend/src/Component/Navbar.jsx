@@ -9,7 +9,7 @@ function Navbar() {
          <div className="w-full h-16 bg-gray-700 font-medium transition-all duration-500 transition-all overflow-hidden">
             {/* lOGO */}
             <div className="flex">
-               <img src="./image/Adarsh.jpeg" alt="" className="w-12 h-12 border-2 border-black rounded-full m-2 " />
+               <img src="/image/Adarsh.jpeg" alt="" className="w-12 h-12 border-2 border-black rounded-full m-2 " />
                <ul className="w-1/2 text-lime-100 font-semiBold m-auto hidden md:flex">
                   <Link to="/" className='mx-3 lg:mx-2 mt-2 hover:text-lime-800 active transition-all'>Home</Link>
                   <Link to="/about" className='mx-3 lg:mx-3 mt-2 hover:text-lime-800 transition-all'>About</Link>

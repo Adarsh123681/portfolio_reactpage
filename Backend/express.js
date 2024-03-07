@@ -83,14 +83,10 @@ app.post("/contact", async (req, res) => {
   if (!username || !email || !message) {
     return res.status(422).json({ message: "Please fill all the information" });
   }
-  try {
-    const userfind = await userDetails.findOne({ email: email });
-    if (userfind) {
-      return res.status(201).json({ message: "user found" });
-    }
+  try { 
     const saveData = await new contact({
       username,
-      email: userfind,
+      email,
       message,
     });
 
