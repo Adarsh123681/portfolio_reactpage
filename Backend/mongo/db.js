@@ -1,6 +1,6 @@
 const mongoose = require("mongoose"); 
-const connection = mongoose.connect(process.env.URL);
-mongoose.set('strictQuery', false);
+mongoose.set('strictQuery', false)
+const connection = mongoose.connect(process.env.URL);  
 connection
   ? console.log("Connected succesfully..")
   : console.log("not connected");

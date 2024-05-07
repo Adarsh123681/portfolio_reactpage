@@ -29,7 +29,7 @@ function SignUp() {
     })
 
     const value = await res.json();
-    console.log(value)
+  
     if (res.status === 400 || !value) {
       toast("Invalid credentials...", {
         type: "danger",
@@ -47,6 +47,7 @@ function SignUp() {
       });
     }
     else {
+      
       toast("Registration completed , you are redirecting to login Page", {
         type: "sucess",
         position: "top-center",
@@ -61,21 +62,21 @@ function SignUp() {
 
   return (
     <div className="bg-gray-800 w-fill h-fit grid place-content-center">
-      <form className="w-fill md:w-fit md:my-20 mt-8 mb-6 border-2 p-10 bg-black border-black-500 transition-all duration-500 rounded-3xl shadow-2xl shadow-black ease-in" method='Post' action='/signUp'>
+      <form className="w-fill md:w-fit md:my-20 mt-8 mb-6 border-2 p-10 bg-black border-black-500   rounded-3xl shadow-2xl shadow-black " method='Post' action='/signUp'>
         <div className='text-center text-gray-200 flex flex-col'>
-          <label forHtml="name-1">Register Your Self  !!!</label>
+          <label >Register Your Self  !!!</label>
 
-          <input type="text" value={input.username} name="username" placeholder='Enter Your Username' onChange={handleInput} className="w-fill md:w-80 text-gray-600 md:my-2 my-1 rounded-lg hover:border-2 hover:shadow-md hover:shadow-black" />
+          <input type="text" value={input.username} name="username" placeholder='Enter Your Username' onChange={handleInput} className="w-fill md:w-80 text-gray-600 MY-2 rounded-lg  " />
 
-          <input type="email" value={input.email} name="email" placeholder='Enter your email ' onChange={handleInput} className="md:w-80 text-gray-600 md:my-2 my-1 rounded-lg hover:border-2 hover:shadow-md hover:shadow-black" />
+          <input type="email" value={input.email} name="email" placeholder='Enter your email ' onChange={handleInput} className="md:w-80 text-gray-600 md:my-2 my-1 rounded-lg  " />
 
-          <input type="password" value={input.password} name="password" placeholder='Enter your password' onChange={handleInput} className="md:w-80 text-gray-600 md:my-2 my-1 rounded-lg hover:border-2 hover:shadow-md hover:shadow-black" />
+          <input type="password" value={input.password} name="password" placeholder='Enter your password' onChange={handleInput} className="md:w-80 text-gray-600 md:my-2 my-1 rounded-lg    " />
 
-          <textarea name="address" value={input.address} id="" cols="24" rows="4" onChange={handleInput} placeholder='Enter Your Address' className='md:w-80 text-gray-600 md:my-2 my-1 rounded-lg hover:border-2 hover:shadow-md hover:shadow-black'></textarea>
+          <textarea name="address" value={input.address} id="" cols="24" rows="4" onChange={handleInput} placeholder='Enter Your Address' className='md:w-80 text-gray-600 md:my-2 my-1 rounded-lg  '></textarea>
         </div>
-        <div class="">
-          <div class="my-3">
-            <button onClick={submit} class="w-20 md:w-28 text-gray-300 bg-red-800 hover:bg-red-300 hover:text-black hover:scale-100 p-2 rounded-lg mx-[6.3rem] sm-mx[8rem]">Submit</button>
+        <div className="">
+          <div className="my-3">
+            <button onClick={submit} className="w-20 md:w-28 text-gray-300 bg-red-800 hover:bg-red-300 hover:text-black hover:scale-100 p-2 rounded-lg mx-[6.3rem] sm-mx[8rem]">Submit</button>
             <ToastContainer />
           </div>
         </div>

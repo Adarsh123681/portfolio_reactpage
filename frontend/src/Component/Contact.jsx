@@ -55,15 +55,15 @@ function Contact() {
         position: "top-center",
         autoClose: 5000,
       });
-       
+
     }
     setData(" ")
   };
   return (
     <>
       {/* main container */}
-      <div className="bg-gray-800 h-screen grid place-content-center mt-[-8rem]">
-        <form className="w-80 md:my-20 border-2 p-10 bg-black border-black-500 transition-all duration-500 rounded-3xl  mt-10 shadow-2xl shadow-black ease-in" method='POST' action='/contact'>
+      <div className="bg-gray-800 h-screen grid place-content-center">
+        <form className="w-96  mb-6 md:my-12 border-2 p-10 bg-black border-black-500 transition-all  rounded-md shadow-2xl shadow-black mt-4" method='POST' action='/contact'>
           <h1 className="text-white text-center">
             Ready to Get Started? Contact Us Now!
           </h1>
@@ -72,7 +72,7 @@ function Contact() {
             value={data.username}
             type="text"
             placeholder="First Name"
-            className="w-52 lg:w-60 ml-2 font-sans hover:translate-y-1 border-none transition-all  text-black border-3 rounded-lg my-1"
+            className=" lg:w-60 ml-2 font-sans hover:translate-y-1 border-none transition-all  text-black border-3 rounded-lg my-1"
             onChange={HandleOnChange}
           />
           <input
@@ -80,14 +80,14 @@ function Contact() {
             value={data.email}
             type="email"
             placeholder="Email..."
-            className="w-52 ml-2 lg:w-60 font-sans hover:translate-y-1 border-none transition-all text-black border-3 rounded-lg my-1"
+            className=" ml-2 lg:w-60 font-sans hover:translate-y-1 border-none transition-all text-black border-3 rounded-lg my-1"
             onChange={HandleOnChange}
           />
           <textarea
             name="message"
             value={data.message}
             id=""
-            className=" w-56 ml-2 lg:w-60 font-sans hover:translate-y-1 border-none transition-all text-black border-2 rounded-lg my-1 h-24"
+            className=" ml-2 lg:w-60 font-sans hover:translate-y-1 border-none transition-all text-black border-2 rounded-lg my-1 h-24"
             onChange={HandleOnChange}
             placeholder="Messages..."
           ></textarea>
@@ -99,7 +99,7 @@ function Contact() {
             >
               Submit
             </button>
-            <ToastContainer/>
+            <ToastContainer />
           </div>
         </form>
       </div>

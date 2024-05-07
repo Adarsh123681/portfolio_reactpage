@@ -57,15 +57,15 @@ function SignIn() {
     <>
 
       <div className="dark:bg-gray-800 h-fit grid place-content-center">
-        <form className="w-fit mt-8 mb-6 md:my-12 border-2 p-10 bg-black border-black-500 transition-all duration-500 rounded-3xl mt-0 shadow-2xl shadow-black ease-in" method='Post' action='/signIn'>
+        <form className="w-fit mt-8 mb-6 md:my-12 border-2 p-10 bg-black border-black-500 transition-all  rounded-md mt-0 shadow-2xl shadow-black mt-4" method='Post' action='/signIn'>
           <div className='text-center text-gray-200 flex flex-col'>
-            <label forHtml="name-1">Welcome Back !!!</label>
+            <label>Welcome Back !!!</label>
 
-            <input type="text" value={input.username} name="username" placeholder='Enter Your Username' onChange={handleInput} className="md:w-60 md:my-2 my-1 text-black rounded-lg hover:border-2 hover:shadow-md hover:shadow-black" />
+            <input type="text" value={input.username} name="username" placeholder='Enter Your Username' onChange={handleInput} className="md:w-60 md:my-2 my-1 text-black rounded-lg " />
 
-            <input type="email" value={input.email} name="email" placeholder='Enter your email ' onChange={handleInput} className="md:w-60 md:my-2 my-1 rounded-lg hover:border-2 text-black hover:shadow-md hover:shadow-black" />
+            <input type="email" value={input.email} name="email" placeholder='Enter your email ' onChange={handleInput} className="md:w-60 md:my-2 my-1 rounded-lg " />
 
-            <input type="password" value={input.password} name="password" placeholder='Enter your password' onChange={handleInput} className="md:w-60 md:my-2 my-1 rounded-lg text-black hover:border-2 hover:shadow-md hover:shadow-black" />
+            <input type="password" value={input.password} name="password" placeholder='Enter your password' onChange={handleInput} className="md:w-60 md:my-2 my-1 rounded-lg text-black " />
 
             <h1 className='font-sans-serif'>Not Registerd Go To: <Link to="/signUp" className='text-red-600'>SignUp</Link></h1>
           </div>

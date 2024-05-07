@@ -27,7 +27,7 @@ function Home() {
               href={resume}
               download="Resume.pdf"
             >
-              <button className='w-40 h-10 bg-red-800 hover:bg-red-300 hover:scale-110 rounded-lg shadow-md shadow-red-100 hidden md:flex p-2' download="resume">Download Resume</button>
+              <button className='w-40 h-10 bg-red-800 hover:bg-red-300 hover:scale-110 rounded-lg shadow-md shadow-red-100 hidden md:flex text-center pl-8' download="resume">Resume</button>
             </a>
             <div className="flex m-auto md:ml-3 md:mt-3 md:flex">
               <a href="https://www.linkedin.com/feed/"><BsLinkedin className='w-6 md:10 md:h-10 h-6 mx-[.2rem] hover:scale-110 duration-150 text-blue-400' /></a>

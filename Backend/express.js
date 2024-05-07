@@ -9,6 +9,7 @@ const cookieParser = require("cookie-parser");
 require("./mongo/db");
 const userDetails = require("./model/user");
 const contact = require("./model/contactdetails");
+const auth = require("./Authentication/Auth")
 app.use(express.json());
 app.use(cookieParser());
 app.use(function(req, res, next) {
@@ -78,7 +79,7 @@ app.post("/signIn", async (req, res) => {
 });
 
 // contact
-app.post("/contact", async (req, res) => {
+app.post("/contact", auth , async (req, res) => {
   const { username, email, message } = await req.body;
   if (!username || !email || !message) {
     return res.status(422).json({ message: "Please fill all the information" });

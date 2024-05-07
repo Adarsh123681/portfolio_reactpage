@@ -3,7 +3,9 @@ import { Link } from 'react-router-dom';
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiFillCloseCircle } from "react-icons/ai"; 
 function Navbar() {
-   const [open, setOpen] = useState(false)
+   const [open, setOpen] = useState(false);
+   const [signInopen, setSignInopen] = useState(false);
+   const [signUpopen, setSignUpopen] = useState(false);
    return (
       <>
          <div className="w-full h-16 bg-gray-700 font-medium transition-all duration-500 transition-all overflow-hidden">

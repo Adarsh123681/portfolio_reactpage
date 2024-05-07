@@ -34,12 +34,27 @@ function Skills() {
       name: "/image/appwriteProject.png",
       style:`${style} shadow-red-700`,
     },
+    {
+      id: 7,
+      name: "/image/netlify.png",
+      style:`${style} shadow-white`,
+    },
+    {
+      id: 6,
+      name: "/image/api-clients.png",
+      style:`${style} shadow-orange-700`,
+    },
+    {
+      id: 6,
+      name: "/image/mongoose.png",
+      style:`${style} shadow-red-900`,
+    } 
   ];
   return (
     <>
       <div className="min-w-fit h-fit m-auto">
         <h1 className="text-2xl py-4 md:text-xl p-2 bg-gray-600 text-cyan-300 rounded-lg font-bold text-center">TECHNICAL SKILLS</h1>
-        <div className="my-12 ml-8 mb-16 md:mx-5 grid grid-cols-3 md:grid md:grid-cols-4 md:h-68 lg:grid-cols-5 gap-4 lg:content-start" data-aos="zoom-in">
+        <div className="my-12 ml-8 mb-16 md:mx-5 grid grid-cols-3 md:grid md:grid-cols-4 md:h-68 lg:grid-cols-5 gap-4 lg:content-start">
           {icons.map((ele) => {
             const { id, name, style } = ele;
             return (
