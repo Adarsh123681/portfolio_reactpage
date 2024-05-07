@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Card from './Card';
 import data from "./Data"
 function Project() {
-  
+
   return (
     <>
       <h1 className="text-center text-2xl py-4 md:text-sm  p-2 bg-gray-600 text-cyan-300 font-bold text-center">PROJECTS</h1>
