@@ -56,7 +56,7 @@ function SignIn() {
   return (
     <>
 
-      <div className="dark:bg-gray-800 h-fit grid place-content-center">
+      <div className="bg-gray-800 h-fit grid place-content-center">
         <form className="w-fit mt-8 mb-6 md:my-12 border-2 p-10 bg-black border-black-500 transition-all  rounded-md mt-0 shadow-2xl shadow-black mt-4" method='Post' action='/signIn'>
           <div className='text-center text-gray-200 flex flex-col'>
             <label>Welcome Back !!!</label>

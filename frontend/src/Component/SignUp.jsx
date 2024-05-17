@@ -61,8 +61,8 @@ function SignUp() {
   }
 
   return (
-    <div className="bg-gray-800 w-fill h-fit grid place-content-center">
-      <form className="w-fill md:w-fit md:my-20 mt-8 mb-6 border-2 p-10 bg-black border-black-500   rounded-3xl shadow-2xl shadow-black " method='Post' action='/signUp'>
+    <div className="bg-gray-800 h-fit grid place-content-center">
+      <form className="w-fit md:w-fit md:my-20 mt-8 mb-6 border-2 p-10 bg-black border-black-500   rounded-3xl shadow-2xl shadow-black " method='Post' action='/signUp'>
         <div className='text-center text-gray-200 flex flex-col'>
           <label >Register Your Self  !!!</label>
 

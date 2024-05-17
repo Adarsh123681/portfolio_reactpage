@@ -62,44 +62,45 @@ function Contact() {
   return (
     <>
       {/* main container */}
-      <div className="bg-gray-800 h-screen grid place-content-center">
-        <form className="w-96  mb-6 md:my-12 border-2 p-10 bg-black border-black-500 transition-all  rounded-md shadow-2xl shadow-black mt-4" method='POST' action='/contact'>
-          <h1 className="text-white text-center">
-            Ready to Get Started? Contact Us Now!
-          </h1>
-          <input
-            name="username"
-            value={data.username}
-            type="text"
-            placeholder="First Name"
-            className=" lg:w-60 ml-2 font-sans hover:translate-y-1 border-none transition-all  text-black border-3 rounded-lg my-1"
-            onChange={HandleOnChange}
-          />
-          <input
-            name="email"
-            value={data.email}
-            type="email"
-            placeholder="Email..."
-            className=" ml-2 lg:w-60 font-sans hover:translate-y-1 border-none transition-all text-black border-3 rounded-lg my-1"
-            onChange={HandleOnChange}
-          />
-          <textarea
-            name="message"
-            value={data.message}
-            id=""
-            className=" ml-2 lg:w-60 font-sans hover:translate-y-1 border-none transition-all text-black border-2 rounded-lg my-1 h-24"
-            onChange={HandleOnChange}
-            placeholder="Messages..."
-          ></textarea>
-          {/* on submit button */}
-          <div className="m-auto my-5">
-            <button
-              className="w-24 h-10 mx-20 text-xl border-3 border-black rounded-lg bg-blue-600 hover:bg-blue-300 transition-all text-white"
-              onClick={submit}
-            >
-              Submit
-            </button>
-            <ToastContainer />
+      <div className="bg-gray-800 h-fit grid place-content-center">
+        <form className="w-fit md:w-fit md:my-20 mt-8 mb-6 border-2 p-10 bg-black border-black-500   rounded-3xl shadow-2xl shadow-black" method='POST' action='/contact'>
+          <div className='text-center text-gray-200 flex flex-col'>
+            <h1 className="text-white text-center">
+              Ready to Get Started? Contact Us Now!
+            </h1>
+            <input
+              name="username"
+              value={data.username}
+              type="text"
+              placeholder="First Name"
+              className="w-fill md:w-80 text-gray-600 MY-2 rounded-lg my-4"
+              onChange={HandleOnChange}
+            />
+            <input
+              name="email"
+              value={data.email}
+              type="email"
+              placeholder="Email..." className="w-fill md:w-80 text-gray-600 MY-2 rounded-lg my-2"
+              onChange={HandleOnChange}
+            />
+            <textarea
+              name="message"
+              value={data.message}
+              id=""
+              className="w-fill md:w-80 text-gray-600 MY-2 rounded-lg my-2"
+              onChange={HandleOnChange}
+              placeholder="Messages..."
+            ></textarea>
+            {/* on submit button */}
+            <div className="m-auto my-5">
+              <button
+                className="w-24 h-10 mx-20 text-xl border-3 border-black rounded-lg bg-blue-600 hover:bg-blue-300 transition-all text-white"
+                onClick={submit}
+              >
+                Submit
+              </button>
+              <ToastContainer />
+            </div>
           </div>
         </form>
       </div>
