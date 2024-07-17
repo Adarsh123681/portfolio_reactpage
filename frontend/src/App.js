@@ -5,17 +5,19 @@ import SignIn from "./Component/SignIn";
 import Project from "./Component/Project";
 import Contact from "./Component/Contact";
 import Services from "./Component/Services";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Navbar from "./Component/Navbar";
 import SignUp from "./Component/SignUp";
 import Footer from "./Component/Footer";
 import Workexperience from "./Component/Workexperience";
+
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
     <>
       <BrowserRouter>
         <Navbar />
+     
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />

@@ -32,7 +32,7 @@ function Navbar() {
                </div>
             </div>
             {
-               open && (<ul className="w-full h-screen flex flex-col absolute right-0 bg-gray-800 text-white pl-8 text-md font-mono transition-all duration-300">
+               open && (<ul className="w-full h-screen flex flex-col absolute right-0 bg-gray-800 text-white pl-8 text-2xl font-mono transition-all duration-300 text-center">
                   <Link to="/" className='mx-3 lg:mx-3 my-2 hover:text-red-500 transition-all duration-200 tracking-wide font-bold'>Home</Link>
                   <Link to="/about" className='mx-3 lg:mx-3 my-2 hover:text-red-500 transition-all duration-200 tracking-wide font-bold font-mono'>About</Link>
                   <Link to="/project" className='mx-3 lg:mx-3 my-2 hover:text-red-500 transition-all duration-200 tracking-wide font-bold font-mono'>Project</Link>
