@@ -58,8 +58,6 @@ function SignUp() {
       history.push("/signIn");
     }
 
-
-
   }
 
   return (

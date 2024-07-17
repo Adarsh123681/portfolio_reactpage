@@ -60,19 +60,16 @@ function Skills() {
     }
   ];
 
-   
   return (
     <>
       <div className="min-w-fit h-fit m-auto">
-        <h1 className="min-w-fit text-3xl py-4 md:text-3xl p-2 bg-gray-600 text-cyan-300 rounded-lg   text-center">TECHNICAL SKILLS</h1>
+        <h1 className="text-2xl py-4 md:text-xl p-2 bg-gray-600 text-cyan-300 rounded-lg font-bold text-center">TECHNICAL SKILLS</h1>
         <div className="my-12 ml-8 mb-16 md:mx-5 grid grid-cols-3 md:grid md:grid-cols-4 md:h-68 lg:grid-cols-5 gap-4 lg:content-start">
           {icons.map((ele) => {
-            const { id, img, style, name } = ele;
+            const { id, img, style } = ele;
             return (
               <>
-                <div className="text-center">  
                   <img key={id} src={img} alt="" srcset="" className={style} />
-                </div>
               </>
             );
           })}

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { GiHamburgerMenu } from "react-icons/gi";
-import { AiFillCloseCircle } from "react-icons/ai"; 
+import { AiFillCloseCircle } from "react-icons/ai";
 function Navbar() {
    const [open, setOpen] = useState(false);
-   
+
    return (
       <>
          <div className="w-full h-16 bg-gray-700 font-medium transition-all duration-500 transition-all overflow-hidden">
@@ -20,7 +20,7 @@ function Navbar() {
                   <Link to="/contact" className='mx-3 lg:mx-3 my-2 hover:text-lime-800 transition-all duration-200 tracking-wide'>Contact Me</Link>
                   <div className='absolute right-9'>
                      <Link to="/signIn"><input type="button" value="SignIn" className='w-20 rounded-lg my-1 mx-2 p-1 bg-green-800 hover:bg-green-300 hover:text-black transition-all duration-200' />
-                     </Link> 
+                     </Link>
                      <Link to="/signUp"><input type="button" value="SignUp" className='w-20 rounded-lg my-1 p-1 bg-red-900 hover:bg-red-200 hover:text-black transition-all duration-200' />
                      </Link>
                   </div>
@@ -32,7 +32,7 @@ function Navbar() {
                </div>
             </div>
             {
-               open && (<ul className="w-full h-screen flex flex-col absolute right-0 bg-gray-800 text-white pl-8 text-2xl font-mono transition-all duration-300 text-center">
+               open && (<ul className="w-full h-screen flex flex-col absolute right-0 bg-gray-800 text-white pl-8 text-md font-mono transition-all duration-300">
                   <Link to="/" className='mx-3 lg:mx-3 my-2 hover:text-red-500 transition-all duration-200 tracking-wide font-bold'>Home</Link>
                   <Link to="/about" className='mx-3 lg:mx-3 my-2 hover:text-red-500 transition-all duration-200 tracking-wide font-bold font-mono'>About</Link>
                   <Link to="/project" className='mx-3 lg:mx-3 my-2 hover:text-red-500 transition-all duration-200 tracking-wide font-bold font-mono'>Project</Link>
