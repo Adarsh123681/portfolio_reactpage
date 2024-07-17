@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 function Skills() {
   const style = "w-16 h-16 sm:w-28 sm:h-28 sm:ml-4 md:w-28 md:h-28 lg:w-32 lg:h-32 my-5 border-1 rounded-[1rem] p-1 shadow-md hover:scale-110 transition-all duration-500 shadow-[2rem] grid sm:grid-cols-4 gap-2";

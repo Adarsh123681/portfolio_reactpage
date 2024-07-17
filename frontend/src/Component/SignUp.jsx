@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useHistory } from "react-router-dom"
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+ 
+ 
 function SignUp() {
   const history = useHistory()
   const [input, setInput] = useState({
@@ -31,7 +31,7 @@ function SignUp() {
     const value = await res.json();
 
     if (res.status === 400 || !value) {
-      // toast("Invalid credentials...", {
+       
       //   type: "danger",
       //   position: "top-center",
       //   autoClose: 3000,
@@ -40,7 +40,7 @@ function SignUp() {
       window.alert("Invalid credentials...")
     }
     else if (res.status === 422) {
-      // toast("Fill All Information", {
+    
       //   type: "warning",
       //   position: "top-center",
       //   autoClose: 3000,
@@ -49,7 +49,7 @@ function SignUp() {
       window.alert("Fill All Information")
     }
     else {
-      // toast("Registration completed , you are redirecting to login Page", {
+      
       //   type: "sucess",
       //   position: "top-center",
       //   autoClose: 3000,
@@ -77,7 +77,7 @@ function SignUp() {
         <div className="">
           <div className="my-3">
             <button onClick={submit} className="w-20 md:w-28 text-gray-300 bg-red-800 hover:bg-red-300 hover:text-black hover:scale-100 p-2 rounded-lg mx-[6.3rem] sm-mx[8rem]">Submit</button>
-            <ToastContainer />
+           
           </div>
         </div>
       </form>

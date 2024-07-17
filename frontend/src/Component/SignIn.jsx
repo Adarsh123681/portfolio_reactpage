@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import { Link, useHistory } from "react-router-dom";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-
+  
 function SignIn() {
   const history = useHistory();
   const [input, setInput] = useState({
@@ -32,14 +30,14 @@ function SignIn() {
     }
     else if (res.status === 422) {
       window.alert("Please fill all information");
-      // toast("Please fill all information...", {
+     
       //   type: "warning",
       //   position: "top-center",
       //   autoClose: 5000,
       // });
     }
     else {
-      // toast("User LogedIn...", {
+      
       //   type: "success",
       //   position: "top-center",
       //   autoClose: 5000,
@@ -67,7 +65,7 @@ function SignIn() {
 
           <div className="my-3">
             <button onClick={submit} className="w-20 text-gray-300 bg-red-800 hover:bg-red-300 hover:text-black hover:scale-100 p-2 rounded-lg mx-[5rem]">Submit</button>
-            <ToastContainer />
+          
           </div>
         </form>
 
