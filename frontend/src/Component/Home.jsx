@@ -22,19 +22,25 @@ function Home() {
             <span className="text-3xl">I am</span>
             <span className="text-xl leading-10 bold text-gradient-to-r from-blue-600 via-green-500 to-indigo-400">Adarsh Tripathi</span>
             {/* text-small */}
-            <span className="text-md mb-5">Web Developer</span> 
+
+            <span className="text-md mb-5">Web Developer</span>
+
             <a
               href={resume}
               download="updatedNewResume.pdf"
             >
-              <button className='w-40 h-10 bg-red-800 hover:bg-red-300 hover:scale-110 rounded-lg shadow-md shadow-red-100 hidden md:flex text-center pl-8' download="resume">Resume</button>
+              <span class="relative px-5 py-3 transition-all ease-in duration-75 bg-white dark:bg-red-900 rounded-2xl group-hover:bg-opacity-0">Download Resume
+              </span>
             </a>
-            <div className="flex m-auto md:ml-3 md:mt-3 md:flex">
-              <a href="https://www.linkedin.com/feed/"><BsLinkedin className='w-6 md:10 md:h-10 h-6 mx-[.2rem] hover:scale-110 duration-150 text-blue-400' /></a>
-              <a href="https://www.instagram.com/invites/contact/?i=1nubf8w7k89q0&utm_content=eb0oqd3"> <BsInstagram className='w-6 md:10 md:h-10 h-6 mx-2 hover:scale-110 duration-150 text-red-700' /></a>
-              <a href="https://web.telegram.org/z/"><BsTelegram className='w-6 md:10 md:h-10 h-6 mx-2 hover:scale-110 duration-150 text-blue-400' /></a>
-              <a href="https://github.com/Adarsh123681"><BsGithub className='w-6 md:10 md:h-10 h-6 mx-2 hover:scale-110 duration-150 text-blue-400' /></a>
-              
+
+            <div className="absolute top-[50%] right-5 ">
+              <div className="text-2xl border-white bottom-2">
+                <a href="https://www.linkedin.com/feed/"><BsLinkedin className='w-6 mx-2 md:10 md:h-10 h-6 hover:scale-110  duration-150 text-blue-400 bottom-2 border-inherit border-white text-2xl' target='_blank'></BsLinkedin> </a>
+              </div>
+              <a href="https://www.instagram.com/invites/contact/?i=1nubf8w7k89q0&utm_content=eb0oqd3" target='_blank'> <BsInstagram className='w-6 md:10 md:h-10 h-6 mx-2 hover:scale-x-110 duration-150 text-red-700 text-3xl' /></a>
+              <a href="https://web.telegram.org/z/" target='_blank'><BsTelegram className='w-6 md:10 md:h-10 h-6 mx-2 hover:scale-110 duration-150 text-blue-400' /></a>
+              <a href="https://github.com/Adarsh123681" target='_blank'><BsGithub className='w-6 md:10 md:h-10 h-6 mx-2 hover:scale-110 duration-150 text-blue-400' /></a>
+
             </div>
           </div>
           {/* image */}

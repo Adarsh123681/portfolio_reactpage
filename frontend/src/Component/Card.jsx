@@ -13,7 +13,7 @@ function Card({ item, content,  Url, image }) {
         <div className="p-2 text-[.9rem] md:text-[1.3rem] text-lime-200 hover:underline">
           {item}
         </div>
-        <div className="text-[.7rem] md:text-[1rem] p-2 sm:text-[1rem] ">
+        <div className="text-[.7rem] md:text-[1rem] p-2 sm:text-[1rem]">
           {
             show ? (
               <>
@@ -34,7 +34,7 @@ function Card({ item, content,  Url, image }) {
           }
         </div>
         <div className="flex justify-center my-4">
-          <button className='w-fit h-fit text-sm border-2 border-white rounded-[.8rem] dark:bg-blue-700 hover:bg-red-300 p-2'><a href={Url}>Code</a></button>
+          <button className='w-fit h-fit text-md p-3 rounded-md dark:bg-blue-900 hover:bg-blue-300 p-2 hover:text-black'><a href={Url} >View Code</a></button>
         </div>
       </div>
     </>
