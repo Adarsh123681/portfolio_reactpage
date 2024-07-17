@@ -8,7 +8,7 @@ import Services from "./Component/Services";
 import Navbar from "./Component/Navbar";
 import SignUp from "./Component/SignUp";
 import Footer from "./Component/Footer";
-import Workexperience from "./Component/Workexperience";
+// import Workexperience from "./Component/Workexperience";
 
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
@@ -17,7 +17,7 @@ function App() {
     <>
       <BrowserRouter>
         <Navbar />
-     
+
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
@@ -26,7 +26,7 @@ function App() {
           <Route path="/signUp" component={SignUp} />
           <Route path="/contact" component={Contact} />
           <Route path="/services" component={Services} />
-          <Route path="/workexperience" component={Workexperience} />
+          {/* <Route path="/workexperience" component={Workexperience} /> */}
         </Switch>
         <Footer />
       </BrowserRouter>
