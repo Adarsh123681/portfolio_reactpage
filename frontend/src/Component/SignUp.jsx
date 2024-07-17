@@ -29,30 +29,32 @@ function SignUp() {
     })
 
     const value = await res.json();
-  
-    if (res.status === 400 || !value) {
-      toast("Invalid credentials...", {
-        type: "danger",
-        position: "top-center",
-        autoClose: 3000,
 
-      });
+    if (res.status === 400 || !value) {
+      // toast("Invalid credentials...", {
+      //   type: "danger",
+      //   position: "top-center",
+      //   autoClose: 3000,
+
+      // });
+      window.alert("Invalid credentials...")
     }
     else if (res.status === 422) {
-      toast("Fill All Information", {
-        type: "warning",
-        position: "top-center",
-        autoClose: 3000,
+      // toast("Fill All Information", {
+      //   type: "warning",
+      //   position: "top-center",
+      //   autoClose: 3000,
 
-      });
+      // });
+      window.alert("Fill All Information")
     }
     else {
-      
-      toast("Registration completed , you are redirecting to login Page", {
-        type: "sucess",
-        position: "top-center",
-        autoClose: 3000,
-      });
+      // toast("Registration completed , you are redirecting to login Page", {
+      //   type: "sucess",
+      //   position: "top-center",
+      //   autoClose: 3000,
+      // });
+      window.alert("Registration completed , you are redirecting to login Page")
       history.push("/signIn");
     }
 

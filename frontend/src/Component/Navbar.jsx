@@ -15,6 +15,7 @@ function Navbar() {
                   <Link to="/" className='mx-3 lg:mx-2 mt-2 hover:text-lime-800 active transition-all'>Home</Link>
                   <Link to="/about" className='mx-3 lg:mx-3 mt-2 hover:text-lime-800 transition-all'>About</Link>
                   <Link to="/project" className='mx-3 lg:mx-3 mt-2 hover:text-lime-800 active transition-all'>Project</Link>
+                  <Link to="/workexperience" className='mx-3 lg:mx-3 mt-2 hover:text-lime-800 active transition-all'>Work-Experience</Link>
                   <Link to="/services" className='mx-3 lg:mx-3 my-2 hover:text-lime-800 transition-all duration-200 tracking-wide'>Services</Link>
                   <Link to="/contact" className='mx-3 lg:mx-3 my-2 hover:text-lime-800 transition-all duration-200 tracking-wide'>Contact Me</Link>
                   <div className='absolute right-9'>

@@ -34,28 +34,29 @@ function Contact() {
 
     const response = await api.json();
     if (api.status === 401 || !response) {
-      toast("Invalid credentials...", {
-        type: "danger",
-        position: "top-center",
-        autoClose: 3000,
+      // toast("Invalid credentials...", {
+      //   type: "danger",
+      //   position: "top-center",
+      //   autoClose: 3000,
 
-      });
+      // });
+      window.alert("Invalid credentials")
     }
     else if (api.status === 422) {
-      // window.alert("Please fill all information");
-      toast("Please fill all information...", {
-        type: "warning",
-        position: "top-center",
-        autoClose: 5000,
-      });
+      window.alert("Please fill all information");
+      // toast("Please fill all information...", {
+      //   type: "warning",
+      //   position: "top-center",
+      //   autoClose: 5000,
+      // });
     }
     else {
-      toast("Messae sendded successfully...", {
-        type: "success",
-        position: "top-center",
-        autoClose: 5000,
-      });
-
+      // toast("Messae sendded successfully...", {
+      //   type: "success",
+      //   position: "top-center",
+      //   autoClose: 5000,
+      // });
+      window.alert("Message sended successfully")
     }
     setData(" ")
   };

@@ -9,7 +9,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Navbar from "./Component/Navbar";
 import SignUp from "./Component/SignUp";
 import Footer from "./Component/Footer";
- 
+import Workexperience from "./Component/Workexperience";
 
 function App() {
   return (
@@ -24,6 +24,7 @@ function App() {
           <Route path="/signUp" component={SignUp} />
           <Route path="/contact" component={Contact} />
           <Route path="/services" component={Services} />
+          <Route path="/workexperience" component={Workexperience} />
         </Switch>
         <Footer />
       </BrowserRouter>

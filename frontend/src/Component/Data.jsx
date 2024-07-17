@@ -4,7 +4,7 @@ const data = [
     name: "Restourant Website",
     url: "https://github.com/Adarsh123681/REACT_Restourant_Website",
     content: "The restaurant app project using the MERN stack encompasses building a full-stack web application. MongoDB serves as the database, storing menu items, orders, and user data. Express.js facilitates server-side logic, while React.js powers the dynamic frontend interface. Node.js runs the backend, handling requests and interfacing with the database. Features include menu display, order placement, user authentication",
-    img: ""
+  
   },
   {
     id: 8,

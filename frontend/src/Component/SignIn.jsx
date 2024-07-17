@@ -28,30 +28,25 @@ function SignIn() {
     const value = await res.json();
 
     if (res.status === 401 || !value) {
-      toast("Invalid credentials...", {
-        type: "danger",
-        position: "top-center",
-        autoClose: 3000,
-
-      });
+      window.alert("Invalid credentials...")
     }
     else if (res.status === 422) {
-      // window.alert("Please fill all information");
-      toast("Please fill all information...", {
-        type: "warning",
-        position: "top-center",
-        autoClose: 5000,
-      });
+      window.alert("Please fill all information");
+      // toast("Please fill all information...", {
+      //   type: "warning",
+      //   position: "top-center",
+      //   autoClose: 5000,
+      // });
     }
     else {
-      toast("User LogedIn...", {
-        type: "success",
-        position: "top-center",
-        autoClose: 5000,
-      });
+      // toast("User LogedIn...", {
+      //   type: "success",
+      //   position: "top-center",
+      //   autoClose: 5000,
+      // });
+      window.alert("user loggedIn")
       history.push("/");
-    }
-
+    } 
   }
   return (
     <>

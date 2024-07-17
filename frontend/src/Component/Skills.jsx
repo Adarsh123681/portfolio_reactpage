@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function Skills() {
   const style = "w-16 h-16 sm:w-28 sm:h-28 sm:ml-4 md:w-28 md:h-28 lg:w-32 lg:h-32 my-5 border-1 rounded-[1rem] p-1 shadow-md hover:scale-110 transition-all duration-500 shadow-[2rem] grid sm:grid-cols-4 gap-2";
@@ -6,60 +6,75 @@ function Skills() {
   const icons = [
     {
       id: 1,
-      name: "/image/react.png",
+      name: "REACT",
+      img: "/image/react.png",
       style: `${style} shadow-blue-700`,
     },
     {
       id: 2,
-      name: "/image/html.png",
-      style:`${style} shadow-red-700`,
+      name: "HTML",
+      img: "/image/html.png",
+      style: `${style} shadow-red-700`,
     },
     {
       id: 3,
-      name: "/image/node.png",
-      style:`${style} shadow-green-700`,
+      name: "NODE",
+      img: "/image/node.png",
+      style: `${style} shadow-green-700`,
     },
     {
       id: 4,
-      name: "/image/bootstrap.jpeg",
-      style:`${style} shadow-blue-400`,
+      name: "BOOTSTRAP",
+      img: "/image/bootstrap.jpeg",
+      style: `${style} shadow-blue-400`,
     },
     {
       id: 5,
-      name: "/image/express.png",
-      style:`${style} shadow-yellow-700`,
+      name: "EXPRESS",
+      img: "/image/express.png",
+      style: `${style} shadow-yellow-700`,
     },
     {
       id: 6,
-      name: "/image/appwriteProject.png",
-      style:`${style} shadow-red-700`,
+      name: "APPWRITE",
+      img: "/image/appwriteProject.png",
+      style: `${style} shadow-red-700`,
     },
     {
       id: 7,
-      name: "/image/netlify.png",
-      style:`${style} shadow-white`,
+      name: "NETLIFY",
+      img: "/image/netlify.png",
+      style: `${style} shadow-white`,
     },
     {
       id: 6,
-      name: "/image/api-clients.png",
-      style:`${style} shadow-orange-700`,
+      name: "API",
+      img: "/image/api-clients.png",
+      style: `${style} shadow-orange-700`,
     },
     {
       id: 6,
-      name: "/image/mongoose.png",
-      style:`${style} shadow-red-900`,
-    } 
+      name: "MONGOOSE",
+      img: "/image/mongoose.png",
+      style: `${style} shadow-red-900`,
+    }
   ];
+
+  const [showName, setShowName] = useState(false)
+   
   return (
     <>
       <div className="min-w-fit h-fit m-auto">
         <h1 className="text-2xl py-4 md:text-xl p-2 bg-gray-600 text-cyan-300 rounded-lg font-bold text-center">TECHNICAL SKILLS</h1>
         <div className="my-12 ml-8 mb-16 md:mx-5 grid grid-cols-3 md:grid md:grid-cols-4 md:h-68 lg:grid-cols-5 gap-4 lg:content-start">
           {icons.map((ele) => {
-            const { id, name, style } = ele;
+            const { id, img, style, name } = ele;
             return (
               <>
-                <img key={id} src={name} alt="" srcset="" className={style} />
+                <div className="text-center">  
+                   <h2 className='m-4x'>{name}</h2> 
+                  <img key={id} src={img} alt="" srcset="" className={style} />
+                </div>
               </>
             );
           })}
