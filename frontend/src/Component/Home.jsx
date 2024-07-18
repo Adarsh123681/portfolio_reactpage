@@ -32,7 +32,7 @@ function Home() {
               </span>
             </a>
             <div className="absolute top-60  right-0  p-2 bg-black hidden md:block">
-              <a href="https://www.linkedin.com/feed/" target='_blank'><BsLinkedin className='w-12 mx-2 md:10 md:h-10 h-12 hover:scale-110  duration-150 text-blue-400 bottom-2 mb-4 ' target='_blank'></BsLinkedin> </a>
+              <a href="https://www.linkedin.com/feed/" target='_blank'><BsLinkedin className='w-12 mx-2 md:10 md:h-10 h-12 hover:scale-110  duration-150 text-blue-400 bottom-2 mb-4 '  ></BsLinkedin> </a>
               <a href="https://www.instagram.com/invites/contact/?i=1nubf8w7k89q0&utm_content=eb0oqd3" target='_blank'> <BsInstagram className='w-12 mx-2 md:10 md:h-10 h-12 hover:scale-110  duration-150 text-red-600 bottom-2 mb-4' /></a>
               <a href="https://web.telegram.org/z/" target='_blank'><BsTelegram className='w-12 mx-2 md:10 md:h-10 h-12 hover:scale-110  duration-150 text-blue-600 bottom-2 mb-4 border-inherit border-white text-2xl' /></a>
               <a href="https://github.com/Adarsh123681" target='_blank'><BsGithub className='w-12 mx-2 md:10 md:h-10 h-12 hover:scale-110  duration-150 text-blue-300 bottom-2 mb-4 border-inherit border-white text-2xl' /></a>
