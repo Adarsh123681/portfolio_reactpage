@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 
 function Contact() {
   const [data, setData] = useState({
@@ -100,7 +98,7 @@ function Contact() {
               >
                 Submit
               </button>
-              <ToastContainer />
+           
             </div>
           </div>
         </form>
