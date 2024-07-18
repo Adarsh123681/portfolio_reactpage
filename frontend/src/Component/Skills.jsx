@@ -69,7 +69,7 @@ function Skills() {
             const { id, img, style } = ele;
             return (
               <>
-                  <img key={id} src={img} alt="" srcset="" className={style} />
+                    <div key={id}> <img src={img} alt="" className={style} /></div>
               </>
             );
           })}

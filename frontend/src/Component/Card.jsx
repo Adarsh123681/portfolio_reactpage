@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
 
 function Card({ item, content,  Url, image }) {
   const [show, setShow] = useState(false)
@@ -18,14 +17,14 @@ function Card({ item, content,  Url, image }) {
             show ? (
               <>
                 {content}
-                <Link variant="secondary" className="text-red-300" onClick={showContent} sx={{ margin: 0 }}>Read Less</Link>
+                <button variant="secondary" className="text-red-300" onClick={showContent} sx={{ margin: 0 }}>Read Less</button>
               </>
             ) : (
               <>
                 {limit}....
                 {
                   content.length > 150 && (
-                    <Link className="text-red-300" onClick={showContent}>Read More</Link>
+                    <button className="text-red-300" onClick={showContent}>Read More</button>
                   )
                 }
 

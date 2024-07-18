@@ -9,11 +9,11 @@ function Project() {
       <div className="h-fit bg-gray-800 grid gap-2 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-center align-items-center item-center text-white">
         {/* map method */}
         {
-          data.map((ele) => {
-            const { name, content, url, img } = ele
+          data.map((ele , id) => {
+            const { name, content, url, img} = ele
             return (
               <>
-                <Card item={name} content={content} Url={url} image={img} />
+                 <div key={id}><Card item={name} content={content} Url={url} image={img} /></div>
               </>
             )
           })
